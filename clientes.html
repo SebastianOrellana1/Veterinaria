@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Veterinaria</title>
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body class="lime lighten-4">
+    <!--Navegador-->
+    <div class="container-fluid">
+        <nav class="light-green">
+            <div class="nav-wrapper light-green container">
+                <a href="index.html" class="brand-logo"><img src="img/logo.png" alt="" width="65" height="65"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Clientes</a></li>
+                    <li><a href="index.html">Consultas</a></li>
+                    <li><a href="index.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--carousel-->
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="img/4.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/3.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/5.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/1.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--carousel 2
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="img/4.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/3.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/5.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/1.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <!--Pie de pagina-->
+    <footer class="page-footer green">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Inicializa carousel-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems,{
+                duration: 500,
+                indicators: true
+            });
+        });
+        // Or with jQuery
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+        s
+    </script>
+
+</body>
+
+</html>
