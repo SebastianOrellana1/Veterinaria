@@ -89,6 +89,7 @@ function buscar() {
                 <td>${doc.data().nombre}</td>
                 <td>${doc.data().apellido}</td>
                 <td>${doc.data().email}</td>
+<<<<<<< HEAD
                 <td><button onclick="muestraInput()" class="btn waves-effect teal darken-1">Modificar</button></td>
             </tr>
             `
@@ -155,4 +156,14 @@ function eliminar(id){
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
+=======
+            </tr>
+            `
+            }else{
+                alert("No se pudo encontrar");
+            }
+
+        });
+    });
+>>>>>>> 655d3803d900644a0afe1e1cf521e06218bb5a01
 }
