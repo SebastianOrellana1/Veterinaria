@@ -10,6 +10,11 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!--firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
 
 </head>
 
@@ -21,9 +26,9 @@
                 <a href="index.html" class="brand-logo"><img src="img/logo.png" alt="" width="65" height="65"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html">Clientes</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
                     <li><a href="index.html">Consultas</a></li>
-                    <li><a href="index.html">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,18 +41,18 @@
                 <div class="carousel carousel-slider center" style=" height: 600px;">
                     <div class="carousel-item green darken-1 white-text" href="#one!">
                         <h2>Registrar</h2>
-                        <p class="white-text">This is your first panel</p>
+                        <p class="white-text">Aqui te puedes registrarte</p>
                         <div class="container">
                             <div class="row">
-                                <form class="col s12 ">
+                                <div class="col s12 ">
                                     <div class="row">
                                         <div class="input-field col s6">
-                                            <input id="first_name" type="text" class="validate white-text">
-                                            <label for="first_name" class="white-text">First Name</label>
+                                            <input id="nombre" type="text" class="validate white-text">
+                                            <label for="first_name" class="white-text">Nombre</label>
                                         </div>
                                         <div class="input-field col s6">
-                                            <input id="last_name" type="text" class="validate white-text">
-                                            <label for="last_name" class="white-text">Last Name</label>
+                                            <input id="apellido" type="text" class="validate white-text">
+                                            <label for="last_name" class="white-text">Apellido</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -62,9 +67,8 @@
                                             <label for="email" class="white-text">Email</label>
                                         </div>
                                     </div>
-                                    <button class="btn waves-effect teal darken-1" type="submit" name="action">Guardar</button>
-
-                                </form>
+                                    <button onclick="guardar()" class="btn waves-effect teal darken-1">Guardar</button>
+                                </div>
                             </div>
 
                         </div>
@@ -72,6 +76,27 @@
                     <div class="carousel-item light-green darken-1 white-text" href="#two!">
                         <h2>Modificar</h2>
                         <p class="white-text">This is your second panel</p>
+                        <div class="container">
+                            <div class="row">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Email</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tabla">
+                                        <tr>
+                                            <td>Alvin</td>
+                                            <td>Eclair</td>
+                                            <td>$0.87</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item lime darken-1 white-text" href="#three!">
                         <h2>Eliminar</h2>
@@ -91,7 +116,15 @@
                     <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
                         content.</p>
                 </div>
-
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer-copyright">
@@ -105,6 +138,8 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Gestion js-->
+    <script src="conexion.js"></script>
     <!--Inicializa carousel-->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -114,11 +149,6 @@
                 indicators: true
             });
         });
-        // Or with jQuery
-        $(document).ready(function () {
-            $('.carousel').carousel();
-        });
-        s
     </script>
 
 </body>
