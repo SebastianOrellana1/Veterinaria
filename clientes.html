@@ -38,8 +38,8 @@
     <div class="container section">
         <div class="row">
             <div class="col s12">
-                <div class="carousel carousel-slider center" style=" height: 600px;">
-                    <div class="carousel-item green darken-1 white-text" href="#one!">
+                <div class="carousel carousel-slider center" style=" height: 750px;">
+                    <div class="carousel-item green darken-1 white-text">
                         <h2>Registrar</h2>
                         <p class="white-text">Aqui te puedes registrarte</p>
                         <div class="container">
@@ -73,35 +73,92 @@
 
                         </div>
                     </div>
-                    <div class="carousel-item light-green darken-1 white-text" href="#two!">
+                    <div class="carousel-item light-green darken-1 white-text">
                         <h2>Modificar</h2>
-                        <p class="white-text">This is your second panel</p>
+                        <p class="white-text">Modifique sus datos</p>
                         <div class="container">
                             <div class="row">
+
+                                <div class="col s12 ">
+
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="email1" type="email" class="validate white-text">
+                                            <label for="email" class="white-text">Email</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="password1" type="password" class="validate white-text">
+                                            <label for="password" class="white-text">Password</label>
+                                        </div>
+                                    </div>
+                                    <button onclick="buscar()" class="btn waves-effect teal darken-1">Buscar</button>
+                                </div>
+
                                 <table>
                                     <thead>
                                         <tr>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
                                             <th>Email</th>
+                                            <th>Funcion</th>
                                         </tr>
                                     </thead>
 
                                     <tbody id="tabla">
                                         <tr>
-                                            <td>Alvin</td>
-                                            <td>Eclair</td>
-                                            <td>$0.87</td>
+
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div id="muestra">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item lime darken-1 white-text" href="#three!">
                         <h2>Eliminar</h2>
-                        <p class="white-text">This is your third panel</p>
+                        <p class="white-text">Elimine los datos de su cuenta</p>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col s12 ">
+
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input id="email2" type="email" class="validate white-text">
+                                            <label for="email" class="white-text">Email</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input id="password2" type="password" class="validate white-text">
+                                            <label for="password" class="white-text">Password</label>
+                                        </div>
+                                    </div>
+                                    <button onclick="buscar1()" class="btn waves-effect teal darken-1">Buscar</button>
+                                </div>
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Email</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tabla2">
+                                        <tr>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p id="linea"></p>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -145,7 +202,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.carousel');
             var instances = M.Carousel.init(elems, {
-                duration: 500,
+                duration: 1500,
                 indicators: true
             });
         });
