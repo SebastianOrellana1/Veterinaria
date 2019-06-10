@@ -75,17 +75,26 @@ function guardar() {
 
 }
 //leer datos
-var tabla = document.getElementById('tabla');
-db.collection("cliente").onSnapshot((querySnapshot) => {
-    tabla.innerHTML = "";
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-        tabla.innerHTML += `
-        <tr>
-            <td>${doc.data().nombre}</td>
-            <td>${doc.data().apellido}</td>
-            <td>${doc.data().email}</td>
-        </tr>
-        `
+function buscar() {
+    var tabla = document.getElementById('tabla');
+    var pass1 = document.getElementById('password1').value;
+    var eml1 = document.getElementById('email1').value;
+    db.collection("cliente").onSnapshot((querySnapshot) => {
+        tabla.innerHTML = "";
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            if (eml1 == `${doc.data().email}` && pass1 == `${doc.data().contraseña}`) {
+                tabla.innerHTML += `
+            <tr>
+                <td>${doc.data().nombre}</td>
+                <td>${doc.data().apellido}</td>
+                <td>${doc.data().email}</td>
+            </tr>
+            `
+            }else{
+                alert("No se pudo encontrar");
+            }
+
+        });
     });
-});
+}
